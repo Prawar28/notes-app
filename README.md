@@ -8,6 +8,7 @@ This repository contains the source code for a simple Notes App built with Node.
 - [Getting Started](#getting-started)
 - [Authentication with Passport JWT](#authentication-with-passport-jwt)
 - [Express Rate Limit and Throttle](#express-rate-limit-and-throttle)
+- [Text Vector Indexing](#text-vector-indexing)
 
 ## Database Schema
 
@@ -50,3 +51,7 @@ Rate limiting is applied to specific routes to control the number of requests pe
 
 ### Throttling
 Throttling is applied to specific routes to control the rate of requests per IP address, allowing only a certain number of requests per second.
+
+## Text Vector Indexing
+
+The `content_vector` column in the Notes table is indexed using GIN (Generalized Inverted Index) for efficient full-text search. This indexing improves the performance of text search operations.
