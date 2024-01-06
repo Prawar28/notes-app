@@ -58,10 +58,9 @@ export const deleteNote = async (noteId, userId) => {
 }
 
 export const searchInNotesByNoteId = async (noteIds, query) => {
-    console.log(noteIds);
+
     const searchQuery = `SELECT id as note_id, content as note FROM notes WHERE id = ANY($1) and content_vector @@ to_tsquery('english', '${query}')`;
-    console.log(searchQuery)
     const data = await pool.query(searchQuery, [noteIds]);
-    console.log('asd', data)
+
     return data.rows;
 }

@@ -96,7 +96,6 @@ export const shareNoteWithUser = async (req, res) => {
 
     try {
         var data = await shareNote(noteId, userId);
-        console.log(data);
         if (data) {
             res.status(200).json({data: 'note shared succesfully'})
         } else {
@@ -117,7 +116,6 @@ export const searchNotes = async (req, res) => {
 
         res.status(200).json({'user_notes': userNotes, 'shared_notes': sharedNotes});
     } catch (error) {
-        console.log(error);
         res.status(400).json({error: 'error in fetching notes'})
     }
 
