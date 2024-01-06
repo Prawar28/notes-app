@@ -28,6 +28,14 @@ npm install
 Replace your pg username and password in src/config/db.js
 nodemon
 ```
+
+or 
+
+For dockerized setup,
+```bash
+docker-compose build && docker-compose up
+```
+
 The application should now be running on http://localhost:3000.
 
 ## Authentication with Passport JWT
