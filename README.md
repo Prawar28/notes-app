@@ -6,7 +6,6 @@ This repository contains the source code for a simple Notes App built with Node.
 
 - [Database Schema](#database-schema)
 - [Getting Started](#getting-started)
-- [Configuration](#configuration)
 - [Authentication with Passport JWT](#authentication-with-passport-jwt)
 - [Express Rate Limit and Throttle](#express-rate-limit-and-throttle)
 
